@@ -1,0 +1,14 @@
+autoclose-html
+editorconfig
+file-icons
+git-plus
+japan-util
+japanese-wrap
+markdown-writer
+minimap
+open-recent
+project-manager
+quick-highlight
+show-ideographic-space
+symbols-tree-view
+

@@ -1,0 +1,48 @@
+# まずキーボード定義を読み込む
+if ( USE104 )
+  include "104.mayu"		# 104 キーボード設定
+  if ( USE109on104 )
+    include "109on104.mayu"	# 104 キーボードを 109 キーボード風に
+  endif
+else
+  include "109.mayu"		# 109 キーボード設定
+  if ( USE104on109 )
+    include "104on109.mayu"	# 109 キーボードを 104 キーボード風に
+  endif
+endif
+
+if ( USEdefault )
+  include	"default.mayu"	# Emacs ライクなさまざまな設定
+endif
+
+
+# MacっぽくTab移動
+
+def subst C-S-*OpenBracket   = C-S-Tab
+def subst C-S-*CloseBracket  = C-Tab
+
+# MacっぽくIMEを切り替え
+
+keymap Global
+
+mod windows += !!LWin
+mod windows += !!RWin
+
+key *IC-W-~IL-RWin    = $ToggleIME # RWinでIME-ON
+key *IC-W-IL-LWin     = $ToggleIME # LWinでIME-OFF
+key *IC-W-IL-RWin     = &Ignore    # RWinかつIME-ONのときはなにもしない
+key *IC-W-~IL-LWin    = &Ignore    # RWinかつIME-ONのときはなにもしない
+
+# Macっぽいキーバインド
+
+key W-c = C-c
+key W-x = C-x
+key W-v = C-v
+key W-a = C-a
+key W-s = C-s
+key W-f = C-f
+key W-y = C-y
+key W-z = C-z
+key W-w = C-w
+key W-q = A-F4
+
