@@ -34,6 +34,7 @@ Chocolatey になかったり、失敗したり、古いものは手動でイン
   - 高速にファイル名から検索できる
 - PhraseExpress http://www.phraseexpress.com/
   - スニペットやクリップボード履歴
+- Google 日本語入力 https://www.google.co.jp/intl/ja/ime/
 
 
 ### マウススクロール
@@ -55,6 +56,12 @@ yamy.ini の escapeNLSKeys の値を 1にする
 タスクスケジューラーに登録
 
 Macっぽいキーバインドにしたいので [my.mayu](my.mayu) のような設定にした。
+
+### git
+
+パスを通す。
+ユーザー変数のPathに `C:\Program Files\Git\cmd` を追加。
+rapideeを使うと簡単
 
 ### apm install
 
